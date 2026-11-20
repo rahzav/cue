@@ -14,7 +14,7 @@ A small Cloudflare Worker for CUE's Rutgers–New Brunswick pilot waitlist. The 
 
 ## Cloudflare setup
 
-1. Connect this GitHub repository (`rahzav/cue`) in **Workers & Pages → Create → Import a repository**. Set Worker name to `cue-waitlist` (matching `wrangler.jsonc`), production branch `main`, root `/`, build command empty, deploy command `npx wrangler deploy`. Cloudflare will assign a `workers.dev` URL. The first deployment shows "Waitlist opens soon" until OAuth and D1 are configured.
+1. Connect this GitHub repository (`rahzav/cue`) in **Workers & Pages → Create → Import a repository**. Set Worker name to `cue` (matching `wrangler.jsonc`), production branch `main`, root `/`, build command empty, deploy command `npx wrangler deploy`. Cloudflare will assign a `workers.dev` URL. The first deployment shows "Waitlist opens soon" until OAuth and D1 are configured.
 2. In **Storage & databases → D1**, create a database named `cue-waitlist`. Open its **Console** and run the SQL in `migrations/0001_waitlist.sql` once.
 3. In the Worker **Settings → Bindings**, add a D1 binding with variable name `DB` pointing to `cue-waitlist`. The binding is configured in Cloudflare, so no database UUID is committed to GitHub.
 4. In Google Cloud Console, configure the OAuth consent screen for an **External** web app. While in Testing, add pilot test users; for broad public use, publish the app and complete any Google requirements. Create a **Web application** OAuth client. Add the exact `https://<worker>.<account>.workers.dev/auth/callback` as an authorized redirect URI and the origin `https://<worker>.<account>.workers.dev` as an authorized JavaScript origin if requested.
