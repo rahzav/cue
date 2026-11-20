@@ -42,7 +42,7 @@ export function landingPage(content: string): string {
     .hero-copy p{font-size:clamp(17px,1.5vw,21px);line-height:1.43;max-width:560px;margin:0;color:#21444b}
     .hero-copy p strong{color:var(--ink)}
     .audience{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:40px;font-size:15px}
-    .audience a{font-weight:800;text-decoration-thickness:1px;text-underline-offset:5px}
+    .audience a{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;min-height:53px;padding:12px 22px;text-decoration:none;font-weight:800;transition:background .2s,transform .2s}.audience a:hover{background:#285864;transform:translateY(-2px)}
     .audience span{color:#2d5057}
     .invite{background:var(--white);color:var(--ink);border:1px solid #132d3066;box-shadow:10px 10px 0 #173941;position:relative;padding:clamp(26px,3.1vw,45px);scroll-margin-top:25px}
     .invite:before,.invite:after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:var(--blue);left:-11px;top:59%;border-right:1px solid #132d3066}
@@ -87,7 +87,7 @@ export function landingPage(content: string): string {
     <section class="hero shell" aria-labelledby="hero-title">
       <div class="kicker">Student services · Rutgers launch</div>
       <h1 id="hero-title">JOIN CUE</h1>
-      <div class="hero-lower"><div class="hero-copy"><h2><span>For the business</span> you're building on campus.</h2><p>Put your services, work, and availability in one place. Students can find your profile and request a booking.</p><div class="audience"><a href="#join">Get founding access</a><span>Looking for a service? You can join too.</span></div></div>
+      <div class="hero-lower"><div class="hero-copy"><h2><span>For the business</span> you're building on campus.</h2><p>Put your services, work, and availability in one place. Students can find your profile and request a booking.</p><div class="audience"><a href="#join">Join CUE</a><span>Looking for a service? You can join too.</span></div></div>
         <div class="invite" id="join"><div class="offer-label">Founding provider offer</div><div class="offer-head">First semester <em>free.</em></div><p class="offer-explain">Join as a provider before launch. No payment today. We’ll share pricing before your free semester ends.</p><div class="join-card">${content}</div></div>
       </div>
     </section>
