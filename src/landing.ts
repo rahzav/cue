@@ -35,7 +35,7 @@ export function landingPage(content: string): string {
     .hero{padding-top:42px;padding-bottom:72px}
     .kicker{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
     .kicker:before{content:'';width:26px;height:2px;background:currentColor}
-    h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(105px,18.5vw,300px);font-weight:900;line-height:.8;letter-spacing:-.105em;margin:40px 0 35px;white-space:nowrap;transform:translateX(-.052em)}
+    h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(105px,18.5vw,300px);font-weight:900;line-height:.8;letter-spacing:-.105em;margin:40px 0 35px;white-space:nowrap}
     .hero-lower{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr);gap:clamp(32px,5vw,92px);align-items:start}
     .hero-copy h2{font-size:clamp(38px,4.4vw,67px);line-height:1.04;letter-spacing:-.06em;font-weight:800;max-width:800px;margin:0 0 24px}
     .hero-copy h2 span{display:block}
