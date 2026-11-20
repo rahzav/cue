@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "cue-waitlist",
+  "name": "cue",
   "main": "src/index.ts",
   "compatibility_date": "2026-11-19",
   "workers_dev": true,
