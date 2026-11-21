@@ -93,7 +93,7 @@ export default {
     if (url.pathname === '/logo.png') return new Response(decodeBase64url(logoBase64.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')), { headers: { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=86400', 'X-Content-Type-Options': 'nosniff' } });
     if (url.pathname === '/site.js') return new Response(landingScript, { headers: { 'Content-Type': 'text/javascript; charset=utf-8', 'Cache-Control': 'public, max-age=3600', 'X-Content-Type-Options': 'nosniff' } });
     if (url.pathname === '/health') return new Response('ok');
-    if (!secretReady(env)) return layout('<span class="tag">Access</span><h3>University sign-in is coming</h3><p>Verified Rutgers students will be able to reserve a place here once sign-in opens.</p><button class="button" type="button" disabled>Sign-in opens soon</button>');
+    if (!secretReady(env)) return layout('<span class="tag">Verified students</span><h3>Join with Rutgers Google</h3><p>University verification is currently unavailable. Registration cannot be completed yet.</p><button class="button" type="button" disabled>Continue with Google</button>');
     if (url.pathname === '/auth/google' && req.method === 'GET') {
       const state = random(), nonce = random();
       const verifier = random();
